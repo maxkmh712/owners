@@ -11,7 +11,7 @@ class Owner(models.Model):
 
 
 class Dog(models.Model):
-    owner_id = models.ForeignKey('Owner', on_delete=models.CASCADE)
+    owner = models.ForeignKey('Owner', on_delete=models.CASCADE)
     name = models.CharField(max_length=45)
     age = models.IntegerField(default=1)
 
